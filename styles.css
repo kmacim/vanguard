@@ -1,6 +1,11 @@
 /* Kevin Riley*/
 
 /* IMPORTED FONTS*/
+@font-face {
+    font-family: van;
+    src: url("Cal_Sans/CalSans-Regular.ttf")
+}
+
 /* IMPORT "INTER" FROM GOOGLE FONTS"
 
 /* CSS RESET */
@@ -67,6 +72,11 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 body{
     min-width: 400px;
+}
+
+h1{
+    font-family: "van", "cursive"; 
+    font-weight:bold;  
 }
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
