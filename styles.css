@@ -341,11 +341,30 @@ tr:nth-child(odd){
     color:#FAF9F6;
     
     margin-left: 20px;
-    padding: 30px;
+    padding: 50px;
     
 }
-input{
-    border-color:#EAEAEA
+  input[type="text"]{
+    background-color:white;
+    padding:15px;
+    display:block;
+    width:100%;
+    border-color:#007BFF;
+}
+
+button{
+    display:block;
+    background-color: #007BFF;
+    color: white;
+    font-weight:bold;
+    width:100%;
+    padding:15px;
+    border-radius:10px;
+}
+address{
+    display:block;
+    text-align: center;
+    padding:10px;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
