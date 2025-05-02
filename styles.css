@@ -6,8 +6,10 @@
     src: url("Cal_Sans/CalSans-Regular.ttf")
 }
 
-/* IMPORT "INTER" FROM GOOGLE FONTS"
-
+ /* IMPORT "INTER" FROM GOOGLE FONTS" */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -74,9 +76,165 @@ body{
     min-width: 400px;
 }
 
+/* create box for header */
+header{
+    display:inline-block;
+    background-color: black;
+    width:100%;
+    padding:1vh;
+    margin-bottom:0%;
+    position:relative;
+}
+
+
+/* setting fonts for h1 thru h3 and p */
 h1{
     font-family: "van", "cursive"; 
-    font-weight:bold;  
+    font-weight:bold; 
+    font-size: 30px;
+    color:#007BFF;
+     padding-top: 20px;
+    padding-left: 60px;
+    
+    
+    
+}
+
+
+/* setting size of h2 */
+
+h2{
+    font-family:"Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.75em;
+    padding: 20px;
+    color:black;
+   
+}
+/* set margin h3 */
+
+h3{
+    font-family:"Inter", sans-serif;
+    margin-left: 10px;
+    font-size: 1.50em; 
+    color:white;
+}
+
+
+/* setting font family for h2 and h3 */
+
+p{
+    font-size: 1.25em;
+    padding:10px;
+}
+nav {
+    background-color:black;
+  }
+  nav ul {
+    width: 50%;
+    margin:0;
+    
+    list-style:none;
+    overflow:hidden;
+    text-align:center;
+    max-height: 0;
+  
+  }
+  
+  nav li a {
+    
+    font-family:sans-serif;
+    font-size:1.rem;
+    padding:1rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration:none;
+    color: white;
+    
+  }
+  nav a:hover, nav input:hover {
+      background-color:white;
+      
+  }
+  nav label {
+      cursor: pointer;
+      display: inline-block;
+      padding: 1.5rem;
+      user-select:none;
+      
+  }
+  /* BUILDS THE MIDDLE LILNE OF THE HAMBURGER */
+  label span {
+      background-color: white;
+      display: block;
+      height: .25rem;
+      position: relative;
+      transition: background-color .3s ease-out;
+      width: 2rem;
+      left: 350px;
+      bottom:100px;
+  }
+  /* BUILDS THE TOP AND BOTTOM LINES OF THE HAMBURGER*/
+  label span:before, label span:after {
+      background: white;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+  }
+  label span:before {
+      top: .75rem;
+  }
+  label span:after {
+      top: -.75rem;
+  }
+  input {
+    display:none;
+  }
+  /* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
+  input:checked ~ ul {
+      max-height: 500px;
+  }
+  /* MAKES THE MIDDLE LINE OF THE HAMBURGER DISAPPEAR */
+  input:checked ~ label span {
+      background: transparent;
+  }
+  /* ROTATES THE TOP LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
+  input:checked ~ label span:before {
+      transform: rotate(-45deg);
+  }
+  /* ROTATES THE BOTTOM LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
+  input:checked ~ label span:after {
+      transform: rotate(45deg);
+  }
+  /* LOCATION OF THE HAMBURGER */
+  input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+      top: 0;
+  }
+
+
+/* hide main navigatiion text */
+  nav h2{
+    visibility: hidden;
+}
+/* color text whit for innovation and investment */
+ .ii{
+    color:#EAEAEA;
+}
+
+/* create box for request consulation */
+#rc{
+    display:block;
+    margin-top:10px;
+    margin-bottom: 8px;
+    font-size: 1.15em;
+    border-radius:5px;
+    background-color:#007BFF;
+    color:#FAF9F6;
+    margin-left: 20px;
+    padding: 10px;
 }
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
@@ -86,7 +244,7 @@ h1{
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ .bgii{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -94,17 +252,100 @@ h1{
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+    color:#EAEAEA;
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+ .svg::before {
     content: "";
-
+    position:absolute;
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
+   padding-left: 20px;
+   
+}
 
+/* create box for what we offer */
+.wwo{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin-top:10px;
+    margin-bottom: 2px;
+    font-size: .75em;
+    border-radius:5px;
+    background-color:#007BFF;
+    color:#FAF9F6;
+    
+    margin-left: 20px;
+    padding: 30px;
+    width:400px;
+    height:40px;
+    transition: width ls, height 1s;
+}
+
+.wwo:hover {
+    width:420;
+    height:45px;
+}
+
+.pr{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin-top:10px;
+    margin-bottom: 2px;
+    border-radius:5px;
+    background-color:#007BFF;
+    color:#FAF9F6;
+    
+    margin-left: 20px;
+    padding: 30px;
+}
+.pbw{
+    color:#EAEAEA;
+}
+/* creating table, thead, tr */
+table, th, td {
+border: 1px solid black;
+padding:20px;
+
+}
+/* table growth with browser */
+table{
+    width:100%;
+text-align:center;
+margin-top: 20px;
+margin-bottom:20px;
+}
+
+/* backgrd color for header/row */
+th{
+    background-color:black;
+}
+tr:nth-child(even){
+    background-color:black;
+}
+tr:nth-child(odd){
+    background-color: #333333;
+}
+
+.ctu{
+    display:grid;
+    grid-template-columns: 1fr;
+    
+    margin-bottom: 2px;
+    font-size: 1em;
+    border-radius:5px;
+    background-color:black;
+    color:#FAF9F6;
+    
+    margin-left: 20px;
+    padding: 30px;
+    
+}
+input{
+    border-color:#EAEAEA
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
