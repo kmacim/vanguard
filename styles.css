@@ -333,17 +333,17 @@ tr:nth-child(odd){
 .ctu{
     display:grid;
     grid-template-columns: 1fr;
-    
     margin-bottom: 2px;
     font-size: 1em;
     border-radius:5px;
     background-color:black;
     color:#FAF9F6;
-    
     margin-left: 20px;
     padding: 50px;
     
 }
+
+
   input[type="text"]{
     background-color:white;
     padding:15px;
@@ -412,22 +412,36 @@ address{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+/* creating grids for box and dbox for media screen */
+.box{
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.dbox {
+    display:grid;
+    grid-template-columns:1fr;
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
-    #results {
+@media screen and (min-width: 800px){
+     .what{
+        display:grid;
         grid-template-columns: 1fr 1fr;
     }
-    .results-container {
-        flex-direction: row;
-        justify-content: space-between;
+    .tand{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
     }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
-    }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1024px){
+    .what{
+       display:grid;
+       grid-template-columns: 1fr 1fr 1fr;
+   }
+   .tand{
+       display:grid;
+       grid-template-columns: 1fr 1fr;
+   }
+}
