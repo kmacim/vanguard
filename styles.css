@@ -422,6 +422,17 @@ address{
     grid-template-columns:1fr;
 }
 
+.ent{
+    display:grid;
+    grid-template-columns: 1fr;
+  
+}
+.zent{
+    display:grid;
+    grid-template-columns: 1fr;
+  
+}
+
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width: 800px){
      .what{
@@ -439,9 +450,15 @@ address{
     .what{
        display:grid;
        grid-template-columns: 1fr 1fr 1fr;
+       width:100%;
    }
    .tand{
        display:grid;
        grid-template-columns: 1fr 1fr;
+   }
+   .cus{
+    display:grid;
+       grid-template-columns: 1fr 1fr ;
+       gap:50px;
    }
 }
